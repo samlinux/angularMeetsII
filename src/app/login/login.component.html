@@ -7,7 +7,7 @@
     <form [formGroup]="form">
       <mat-form-field appearance="fill">
         <mat-label>Mandant</mat-label>
-        <input matInput placeholder="mandant" formControlName="mandant" />
+        <input matInput placeholder="mandant" formControlName="mandant" required />
       </mat-form-field>
 
       <mat-form-field appearance="fill">
@@ -27,7 +27,7 @@
     </form>
   </mat-card-content>
   <mat-card-actions>
-    <button mat-raised-button color="primary" (click)="login()">login</button>
+    <button [disabled]="form.invalid" mat-raised-button color="primary" (click)="login()">login</button>
     <button mat-raised-button color="warn" (click)="reset()">reset</button>
   </mat-card-actions>
 </mat-card>
