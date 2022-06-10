@@ -6,34 +6,32 @@ import { LoginService } from '../service/login.service';
 @Component({
   selector: 'app-login',
   templateUrl: './login.component.html',
-  styleUrls: ['./login.component.css']
+  styleUrls: ['./login.component.css'],
 })
 export class LoginComponent implements OnInit {
-  form:FormGroup;
+  form: FormGroup;
 
   constructor(
     private fb: FormBuilder,
     private router: Router,
     private LoginService: LoginService
-    ) { 
-
-      this.form = this.fb.group({
-        email: ['', Validators.required],
-        password: ['', Validators.required]
-      })
-    }
-
-  ngOnInit(): void {
+  ) {
+    this.form = this.fb.group({
+      mandant: ['', Validators.required],
+      email: ['', Validators.required],
+      password: ['', Validators.required],
+    });
   }
 
-  login(){
+  ngOnInit(): void {}
+
+  login() {
     const val = this.form.value;
-    console.log(val)
+    console.log(val);
     this.LoginService.login(val.email, val.password);
   }
 
-  reset(){
+  reset() {
     this.form.reset();
   }
-
 }
