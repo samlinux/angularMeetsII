@@ -15,6 +15,8 @@ export class DashboardComponent implements OnInit {
 
   logout(){
     this.router.navigate(['login']);
+    localStorage.removeItem('ic-delegation');
+    localStorage.removeItem('ic-identity');
   }
 
 }
