@@ -1,0 +1,19 @@
+<mat-toolbar>
+  <button mat-icon-button class="example-icon" [matMenuTriggerFor]="menu">
+    <mat-icon>menu</mat-icon>
+  </button>
+  <mat-menu #menu="matMenu">
+    <button mat-menu-item routerLink="/dashboard">Dashboard</button>
+    <button mat-menu-item  routerLink="/profile">Profile</button>
+  </mat-menu>
+
+  <span>Angular meets II (Internet Identity)</span>
+  <span class="example-spacer"></span>
+  
+  <mat-icon matTooltip="You are loggin as: {{PrincipalId}}">face</mat-icon>
+
+  <button mat-icon-button  (click)="logout()">
+    <mat-icon matTooltip="Logout">logout</mat-icon>
+  </button>
+</mat-toolbar>
+

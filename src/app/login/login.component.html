@@ -1,34 +1,10 @@
 <mat-card class="loginCard">
-  <mat-card-title>Login</mat-card-title>
-  <mat-card-subtitle
-    >Please fill in your credentials to access the page</mat-card-subtitle
-  >
-  <mat-card-content>
-    <form [formGroup]="form">
-      <mat-form-field appearance="fill">
-        <mat-label>Mandant</mat-label>
-        <input matInput placeholder="mandant" formControlName="mandant" required />
-      </mat-form-field>
-
-      <mat-form-field appearance="fill">
-        <mat-label>Username</mat-label>
-        <input matInput placeholder="Username" formControlName="email" />
-      </mat-form-field>
-
-      <mat-form-field appearance="fill">
-        <mat-label>Password</mat-label>
-        <input
-          matInput
-          type="password"
-          placeholder="Password"
-          formControlName="password"
-        />
-      </mat-form-field>
-    </form>
+  <mat-card-title>Angular meets the II (Internet Identity) - Login</mat-card-title>
+  <mat-card-subtitle>Please login with your Internet Identity to get access.</mat-card-subtitle>
+  <mat-card-content style="text-align:center">
+    <img src="assets/ic-logo.png" style="width:100px"/>
   </mat-card-content>
-  <mat-card-actions>
-    <button [disabled]="form.invalid" mat-raised-button color="primary" (click)="login()">login</button>
-    <button mat-raised-button color="warn" (click)="reset()">reset</button>
-    <button mat-raised-button color="primary" (click)="loginII()">Internet Identity</button>
+  <mat-card-actions style="text-align:center">
+    <button mat-raised-button color="primary" (click)="loginII()">Internet Identity login</button>
   </mat-card-actions>
 </mat-card>
