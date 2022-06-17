@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core';
 import { AuthClient } from "@dfinity/auth-client";
 import { Router } from '@angular/router';
+import { environment } from './../../environments/environment';
 
 @Injectable({
   providedIn: 'root'
@@ -47,7 +48,7 @@ export class LoginIIService {
       //console.log('NOT authenticated');
      
       // Find out which URL should be used for login.
-      const iiUrl = 'http://localhost:8000/?canisterId=rwlgt-iiaaa-aaaaa-aaaaa-cai';
+      const iiUrl = environment.iiUrl;
   
       // Call authClient.login(...) to login with Internet Identity. This will open a new tab
       // with the login prompt. The code has to wait for the login process to complete.

@@ -1,3 +1,4 @@
 export const environment = {
-  production: true
+  production: true,
+  iiUrl: 'https://identity.ic0.app/#authorize'
 };
